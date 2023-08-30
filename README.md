@@ -1,5 +1,5 @@
 # YahooFinanceScapper
-Scrapping Yahoo Finance for Historical Stock Prices using [yfinance]([https://pypi.org/project/yfinance/]) library. 
+Scrapping Yahoo Finance for Historical Stock Prices using [yfinance](https://pypi.org/project/yfinance/) library. 
 Let's go through each function and piece of code in the provided script to understand what it does:
 
 1. **Installing Libraries**: This line installs the necessary libraries (`yfinance` and `pandas`) if they are not already installed.
