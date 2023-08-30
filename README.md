@@ -27,13 +27,13 @@ Let's go through each function and piece of code in the provided script to under
     ticker = yf.Ticker(stock_symbol)
     ```
 
-5. **Getting Listing Date**: The next line fetches the date when the company was listed on the stock exchange by using the `.history()` method with a `period` argument of `"max"`. The `.index[0]` retrieves the earliest date in the data, which corresponds to the listing date.
+5. **Getting Listing Date**: The next line fetches the date when the company was listed on the stock exchange by using the `.history()` method with a `period` argument of `"max"`. The `.index[0]` retrieves the earliest date in the data, which corresponds to the listing date. Likewise you can just put a year like 2010...
 
     ```python
     start_date = ticker.history(period="max").index[0]
     ```
 
-6. **Fetching Historical Data**: This line retrieves the historical stock price data from the listing date until today with a daily interval.
+6. **Fetching Historical Data**: This line retrieves the historical stock price data from the listing date until today with a daily interval. You can modify it to "1mo" for monthly , "1wk" for weekly data or "1d" for daily data, depending on your requirements.
 
     ```python
     historical_data = ticker.history(start=start_date, end=pd.Timestamp.today(), interval="1d")
